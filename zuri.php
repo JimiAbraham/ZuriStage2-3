@@ -12,24 +12,7 @@
 
 <body>
 
- <?php
 
-$time = date('H');
-
-
-
-
-
-if ($time < 11){
-
-    $greet = "Good Morning";
-
-}elseif( $time > 11 and $time < 15 ){
-    $greet = "Good Afternoon";
-}else{
-    $greet = "Good evening";
-}
-            ?>
 
 
 
@@ -84,9 +67,9 @@ if ($time < 11){
         </div>
       </div>
       <div class="flex-fill d-flex align-items-center justify-content-center justify-content-md-end">
-        <button class="btn btn-primary btn-lg">
+        <a href="#form"><button class="btn btn-primary btn-lg">
           <i class="bi bi-person-lines-fill me-3"></i>Contact Me
-        </button>
+        </button></a>
       </div>
     </div>
   </div>
@@ -248,10 +231,26 @@ if ($time < 11){
               </div>
             </div>
           </div>
+
+          <h1 class="display-4 fw-bold mb-0">Contact Me</h1>
+           <form id ="form" method="post" action="form.php">
+
+    <input type="text" name="name" placeholder="name"><br><br>
+
+        <input type="text" name="phone" placeholder="Number"><br><br>
+
+<button type="submit" name= "submit" class="btn btn-primary btn-lg">
+          <i class="bi  me-3"></i>Submit
+        </button>
+
+
+  </form>
         </div>
       </div>
     </div>
   </div>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 
